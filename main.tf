@@ -63,7 +63,7 @@ module "log_metric_filter" {
   source  = "terraform-aws-modules/cloudwatch/aws//modules/log-metric-filter"
   version = "~> 1.0"
 
-  log_group_name = "my-application-logs"
+  log_group_name = "cool_group"
 
   name    = "error-metric"
   pattern = "ERROR"
