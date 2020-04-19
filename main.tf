@@ -46,3 +46,15 @@ module "web_server_sg" {
 
   ingress_cidr_blocks = ["10.10.0.0/16"]
 }
+
+module "s3_bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
+
+  bucket = "bucket-full-of-folio-books"
+  acl    = "private"
+
+  versioning = {
+    enabled = true
+  }
+
+}
